@@ -12,9 +12,10 @@
     "type": "git",
     "url": "git@github.com:MetronomeToken/metronome-desktop-wallet.git"
   },
+  "website": "http://metronome.io",
+  "license": "MIT",
   "homepage": "./",
   "main": "public/electron.js",
-  "copyright": "Copyright © 2018 ${author}",
   "scripts": {
     "start": "react-scripts start",
     "test": "react-scripts test --env=jsdom",
@@ -109,11 +110,12 @@
   },
   "build": {
     "appId": "sh.autonomous.metronome.wallet.desktop",
-    "productName": "Metronome Wallet",
+    "productName": "Metronome Wallet Desktop",
     "files": [
       "build/**/*",
       "node_modules/**/*"
     ],
+    "copyright": "Copyright © 2018 ${author}",
     "publish": {
       "provider": "github"
     },
