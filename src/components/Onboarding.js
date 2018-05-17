@@ -1,4 +1,4 @@
-import { TextInput, BaseBtn, Btn, Sp } from './common'
+import { TextInput, BaseBtn, Checkbox, Btn, Sp } from './common'
 import { sanitizeMnemonic } from '../utils'
 import * as validators from '../validator'
 import EntropyMeter from './EntropyMeter'
@@ -56,6 +56,7 @@ export default class Onboarding extends React.Component {
   }
 
   state = {
+    isDataCollectionAllowed: true,
     passwordWasDefined: false,
     termsWereAccepted: false,
     mnemonicWasCopied: false,
@@ -67,6 +68,10 @@ export default class Onboarding extends React.Component {
     mnemonic: bip39.generateMnemonic(),
     errors: {},
     error: null
+  }
+
+  onDataCollectionToggled = e => {
+    this.setState({ isDataCollectionAllowed: e.target.checked })
   }
 
   onTermsAccepted = () => this.setState({ termsWereAccepted: true })
@@ -132,6 +137,7 @@ export default class Onboarding extends React.Component {
     ev.preventDefault()
 
     const {
+      isDataCollectionAllowed,
       useOwnMnemonic,
       mnemonicAgain,
       userMnemonic,
@@ -158,6 +164,7 @@ export default class Onboarding extends React.Component {
 
     this.props
       .onOnboardingCompleted({
+        dataCollection: isDataCollectionAllowed,
         password,
         mnemonic: useOwnMnemonic ? sanitizeMnemonic(userMnemonic) : mnemonic
       })
@@ -168,6 +175,7 @@ export default class Onboarding extends React.Component {
 
   render() {
     const {
+      isDataCollectionAllowed,
       passwordWasDefined,
       termsWereAccepted,
       mnemonicWasCopied,
@@ -206,7 +214,20 @@ export default class Onboarding extends React.Component {
               </span>.
             </Message>
 
-            <Sp mt={6}>
+            <Sp mt={3}>
+              <Checkbox
+                data-testid="allow-data-collection"
+                onChange={this.onDataCollectionToggled}
+                checked={isDataCollectionAllowed}
+                label="Allow anonymous data collection"
+              >
+                This only includes your platform type, app version and
+                geolocation. No wallet information or keys will be collected.{' '}
+                <b>You will be able to change this setting at any time</b>.
+              </Checkbox>
+            </Sp>
+
+            <Sp mt={5}>
               <Btn
                 data-testid="accept-terms-btn"
                 autoFocus

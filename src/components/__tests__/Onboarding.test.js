@@ -103,7 +103,7 @@ describe('<Onboarding/>', () => {
         })
       })
 
-      it('calls onOnboardingCompleted with pass and mnemonic as arguments', () => {
+      it('calls onOnboardingCompleted with correct arguments', () => {
         const { getByTestId } = reduxRender(element)
         acceptTerms(getByTestId)
         createPassword(getByTestId)
@@ -117,6 +117,7 @@ describe('<Onboarding/>', () => {
         Simulate.submit(getByTestId('mnemonic-form'))
 
         expect(mockCallback).toHaveBeenCalledWith({
+          dataCollection: true,
           password: VALID_PASSWORD,
           mnemonic
         })
@@ -170,9 +171,9 @@ describe('<Onboarding/>', () => {
         })
       })
 
-      it('calls onOnboardingCompleted with pass and mnemonic as arguments', () => {
+      it('calls onOnboardingCompleted with correct arguments', () => {
         const { getByTestId } = reduxRender(element)
-        acceptTerms(getByTestId)
+        acceptTerms(getByTestId, false)
         createPassword(getByTestId)
         recoverFromMnemonic(getByTestId)
 
@@ -183,6 +184,7 @@ describe('<Onboarding/>', () => {
         Simulate.submit(getByTestId('mnemonic-form'))
 
         expect(mockCallback).toHaveBeenCalledWith({
+          dataCollection: false,
           password: VALID_PASSWORD,
           mnemonic: VALID_MNEMONIC
         })
@@ -191,7 +193,12 @@ describe('<Onboarding/>', () => {
   })
 })
 
-function acceptTerms(getByTestId) {
+function acceptTerms(getByTestId, allowDataCollection = true) {
+  if (!allowDataCollection) {
+    const checkbox = getByTestId('allow-data-collection')
+    checkbox.checked = false
+    Simulate.change(checkbox)
+  }
   Simulate.click(getByTestId('accept-terms-btn'))
 }
 

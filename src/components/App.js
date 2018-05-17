@@ -47,13 +47,11 @@ class App extends Component {
     })
   }
 
-  onOnboardingCompleted = ({ password, mnemonic }) => {
-    return sendToMainProcess('create-wallet', { password, mnemonic }).then(
-      () => {
-        this.setState({ onboardingComplete: true })
-        this.props.dispatch({ type: 'session-started' })
-      }
-    )
+  onOnboardingCompleted = args => {
+    return sendToMainProcess('create-wallet', args).then(() => {
+      this.setState({ onboardingComplete: true })
+      this.props.dispatch({ type: 'session-started' })
+    })
   }
 
   onLoginSubmit = ({ password }) => {

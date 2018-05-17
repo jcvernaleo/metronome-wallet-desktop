@@ -1,4 +1,4 @@
-import { DarkLayout, Btn, Sp, TextInput, Flex } from './common'
+import { DarkLayout, Btn, Sp, Checkbox, TextInput, Flex } from './common'
 import { validateMnemonic } from '../validator'
 import ConfirmationWizard from './ConfirmationWizard'
 import { withRouter } from 'react-router-dom'
@@ -6,6 +6,8 @@ import * as utils from '../utils'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import React from 'react'
+
+const { ipcRenderer } = window.require('electron')
 
 const Confirmation = styled.div`
   color: ${p => p.theme.colors.danger};
@@ -27,6 +29,9 @@ class Tools extends React.Component {
   }
 
   state = {
+    isDataCollectionAllowed: ipcRenderer.sendSync('settings-get', {
+      key: 'app.dataCollection'
+    }),
     mnemonic: null,
     errors: {}
   }
@@ -53,6 +58,17 @@ class Tools extends React.Component {
       [id]: value,
       errors: { ...state.errors, [id]: null }
     }))
+  }
+
+  onDataCollectionToggled = e => {
+    const isDataCollectionAllowed = e.target.checked
+    this.setState({ isDataCollectionAllowed }, () => {
+      ipcRenderer.sendSync('settings-set', {
+        key: 'app.dataCollection',
+        value: isDataCollectionAllowed,
+        restart: false
+      })
+    })
   }
 
   onWizardSubmit = password => {
@@ -118,6 +134,20 @@ class Tools extends React.Component {
           <Btn onClick={this.onRescanTransactionsClick}>
             Rescan Transactions
           </Btn>
+        </Sp>
+        <Sp mt={5}>
+          <hr />
+          <h2>Data collection</h2>
+          <Checkbox
+            data-testid="allow-data-collection"
+            onChange={this.onDataCollectionToggled}
+            checked={this.state.isDataCollectionAllowed}
+            label="Allow anonymous data collection"
+          >
+            This only includes information about your platform type, application
+            version and geolocation. No wallet information or keys will be
+            collected.
+          </Checkbox>
         </Sp>
       </Sp>
     )

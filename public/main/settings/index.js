@@ -8,7 +8,8 @@ const restart = require('../electron-restart')
 const { getDb } = require('../database')
 
 const settableSettings = [
-  'app.node.websocketApiUrl'
+  'app.node.websocketApiUrl',
+  'app.dataCollection'
 ]
 
 const getKey = key => settings.get(key)
@@ -64,7 +65,7 @@ function attachSync (ipcMain) {
     event.returnValue = getKey(key)
   })
 
-  ipcMain.on('settings-set', function (event, { key, value }) {
+  ipcMain.on('settings-set', function (event, { key, value, restart = true }) {
     logger.verbose(`Set setting ${key} with value ${value}`)
 
     if (!settableSettings.includes(key)) {
@@ -76,7 +77,7 @@ function attachSync (ipcMain) {
     setKey(key, value)
     event.returnValue = true
 
-    restart()
+    if (restart) restart()
   })
 }
 

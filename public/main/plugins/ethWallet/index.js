@@ -81,7 +81,7 @@ const createSendTransaction = bus => function (args, resolveToReceipt) {
   return deferred.promise
 }
 
-function generateWallet (mnemonic, password) {
+function generateWallet (mnemonic, password, dataCollection) {
   if (!bip39.validateMnemonic(mnemonic)) {
     const error = new WalletError('Invalid mnemonic')
     return { error }
@@ -111,6 +111,7 @@ function generateWallet (mnemonic, password) {
   }
   settings.set(`user.wallets.${walletId}`, walletInfo)
   settings.set('user.activeWallet', walletId)
+  settings.set('app.dataCollection', dataCollection)
 
   // TODO get balance, update and broadcast
   // TODO get transactions, update and broadcast
@@ -539,8 +540,8 @@ const createOpenWallets = (bus, plugins, plugin) =>
 
 const createCreateWallet = (bus, plugins, plugin) =>
   function (data, webContents) {
-    const { password, mnemonic } = data
-    const result = generateWallet(mnemonic, password)
+    const { password, mnemonic, dataCollection } = data
+    const result = generateWallet(mnemonic, password, dataCollection)
 
     if (result.error) {
       return result

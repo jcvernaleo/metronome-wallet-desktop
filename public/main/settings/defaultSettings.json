@@ -1,5 +1,6 @@
 {
   "app": {
+    "dataCollection": true,
     "node": {
     "bestBlock": 0,
       "jsonRpcApiUrl": "https://eth.met.bloqrock.net:8545",
@@ -26,5 +27,5 @@
       "symbol": "MET"
     }
   },
-  "settingsVersion": 5
+  "settingsVersion": 6
 }

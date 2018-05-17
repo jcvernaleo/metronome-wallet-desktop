@@ -10,6 +10,7 @@ import CloseIcon from './CloseIcon'
 import CheckIcon from './CheckIcon'
 import TextInput from './TextInput'
 import Tooltips from './Tooltips'
+import Checkbox from './Checkbox'
 import CopyIcon from './CopyIcon'
 import LogoIcon from './LogoIcon'
 import TxIcon from './TxIcon'
@@ -32,6 +33,7 @@ export {
   CheckIcon,
   TextInput,
   Tooltips,
+  Checkbox,
   CopyIcon,
   LogoIcon,
   FieldBtn,
