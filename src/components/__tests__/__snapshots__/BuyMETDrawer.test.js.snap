@@ -3,10 +3,10 @@
 exports[`<AmountFields/> should match its snapshot 1`] = `
 <div>
   <div
-    class="sc-jKJlTe fkNCah"
+    class="sc-kkGfuU iEVUuG"
   >
     <div
-      class="sc-ckVGcZ kvHIve"
+      class="sc-kEYyzF idKAYT"
     >
       <button
         type="button"
@@ -34,7 +34,7 @@ exports[`<AmountFields/> should match its snapshot 1`] = `
       </div>
     </div>
     <div
-      class="sc-hMqMXs dnTKXF"
+      class="sc-hSdWYo fhzyBj"
     >
       <svg
         class="sc-bxivhb hXQRLM"
@@ -46,7 +46,7 @@ exports[`<AmountFields/> should match its snapshot 1`] = `
       </svg>
     </div>
     <div
-      class="sc-ckVGcZ kvHIve"
+      class="sc-kEYyzF idKAYT"
     >
       <div>
         <label
@@ -72,16 +72,16 @@ exports[`<AmountFields/> should match its snapshot 1`] = `
 exports[`<BuyMETDrawer/> should match its snapshot 1`] = `
 <div>
   <header
-    class="sc-jTzLTM bbfTuz"
+    class="sc-kAzzGY jmErTy"
   >
     <h1
-      class="sc-fjdhpX gUwcgC"
+      class="sc-chPdSV bABddc"
       data-testid="drawer-title"
     >
       Buy Metronome
     </h1>
     <button
-      class="sc-jzJRlG fzwWXa"
+      class="sc-kgoBCf hLhmgk"
       data-testid="drawer-close-btn"
     >
       <svg
@@ -102,13 +102,13 @@ exports[`<BuyMETDrawer/> should match its snapshot 1`] = `
       data-testid="buy-form"
     >
       <div
-        class="sc-hMqMXs dKMJsu"
+        class="sc-hSdWYo lTAcN"
       >
         <div
-          class="sc-jKJlTe fkNCah"
+          class="sc-kkGfuU iEVUuG"
         >
           <div
-            class="sc-ckVGcZ kvHIve"
+            class="sc-kEYyzF idKAYT"
           >
             <button
               type="button"
@@ -136,7 +136,7 @@ exports[`<BuyMETDrawer/> should match its snapshot 1`] = `
             </div>
           </div>
           <div
-            class="sc-hMqMXs dnTKXF"
+            class="sc-hSdWYo fhzyBj"
           >
             <svg
               class="sc-bxivhb hXQRLM"
@@ -148,7 +148,7 @@ exports[`<BuyMETDrawer/> should match its snapshot 1`] = `
             </svg>
           </div>
           <div
-            class="sc-ckVGcZ kvHIve"
+            class="sc-kEYyzF idKAYT"
           >
             <div>
               <label
@@ -169,23 +169,23 @@ exports[`<BuyMETDrawer/> should match its snapshot 1`] = `
           </div>
         </div>
         <div
-          class="sc-hMqMXs bQjXee"
+          class="sc-hSdWYo jBTLxm"
         >
           <div
-            class="sc-jKJlTe kWLJKD"
+            class="sc-kkGfuU hyoUgr"
           >
             <div
-              class="sc-jKJlTe jGctBw"
+              class="sc-kkGfuU eoMiuh"
             >
               <span
-                class="sc-kEYyzF ekxbwv"
+                class="sc-eHgmQL bYKEMH"
               >
                 Gas Limit: 
                 2000000
                 (Units)
               </span>
               <span
-                class="sc-kEYyzF ekxbwv"
+                class="sc-eHgmQL bYKEMH"
               >
                 Gas Price: 
                 1
@@ -204,7 +204,7 @@ exports[`<BuyMETDrawer/> should match its snapshot 1`] = `
         </div>
       </div>
       <div
-        class="sc-gPEVay fwZOlX"
+        class="sc-csuQGl hDBPsM"
       >
         <button
           type="submit"
@@ -221,10 +221,10 @@ exports[`<BuyMETDrawer/> should match its snapshot 1`] = `
 exports[`<GasEditor/> should match its snapshot 1`] = `
 <div>
   <div
-    class="sc-jKJlTe fkNCah"
+    class="sc-kkGfuU iEVUuG"
   >
     <div
-      class="sc-ckVGcZ kvHIve"
+      class="sc-kEYyzF idKAYT"
     >
       <div>
         <label
@@ -243,10 +243,10 @@ exports[`<GasEditor/> should match its snapshot 1`] = `
       </div>
     </div>
     <div
-      class="sc-hMqMXs keWZLk"
+      class="sc-hSdWYo biZuhZ"
     />
     <div
-      class="sc-ckVGcZ kvHIve"
+      class="sc-kEYyzF idKAYT"
     >
       <div>
         <label

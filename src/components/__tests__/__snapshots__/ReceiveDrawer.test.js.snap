@@ -2,16 +2,16 @@
 
 exports[`<ReceiveDrawer/> matches its snapshot 1`] = `
 <header
-  class="sc-jTzLTM bbfTuz"
+  class="sc-kAzzGY jmErTy"
 >
   <h1
-    class="sc-fjdhpX gUwcgC"
+    class="sc-chPdSV bABddc"
     data-testid="drawer-title"
   >
     Receive Transaction
   </h1>
   <button
-    class="sc-jzJRlG fzwWXa"
+    class="sc-kgoBCf hLhmgk"
     data-testid="drawer-close-btn"
   >
     <svg

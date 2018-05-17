@@ -3,10 +3,10 @@
 exports[`<AmountFields/> should match its snapshot 1`] = `
 <div>
   <div
-    class="sc-jKJlTe fkNCah"
+    class="sc-kkGfuU iEVUuG"
   >
     <div
-      class="sc-ckVGcZ kvHIve"
+      class="sc-kEYyzF idKAYT"
     >
       <button
         type="button"
@@ -34,7 +34,7 @@ exports[`<AmountFields/> should match its snapshot 1`] = `
       </div>
     </div>
     <div
-      class="sc-hMqMXs dnTKXF"
+      class="sc-hSdWYo fhzyBj"
     >
       <svg
         class="sc-bxivhb hXQRLM"
@@ -46,7 +46,7 @@ exports[`<AmountFields/> should match its snapshot 1`] = `
       </svg>
     </div>
     <div
-      class="sc-ckVGcZ kvHIve"
+      class="sc-kEYyzF idKAYT"
     >
       <div>
         <label
@@ -72,10 +72,10 @@ exports[`<AmountFields/> should match its snapshot 1`] = `
 exports[`<ConvertMETtoETHForm/> should match its snapshot 1`] = `
 <div>
   <div
-    class="sc-eNQAEJ hdurla"
+    class="sc-iAyFgw gZVNai"
   >
     <div
-      class="sc-hMqMXs dKMJsu"
+      class="sc-hSdWYo lTAcN"
     >
       <form
         data-testid="metToEth-form"
@@ -108,23 +108,23 @@ exports[`<ConvertMETtoETHForm/> should match its snapshot 1`] = `
             />
           </div>
           <div
-            class="sc-hMqMXs bQjXee"
+            class="sc-hSdWYo jBTLxm"
           >
             <div
-              class="sc-jKJlTe kWLJKD"
+              class="sc-kkGfuU hyoUgr"
             >
               <div
-                class="sc-jKJlTe jGctBw"
+                class="sc-kkGfuU eoMiuh"
               >
                 <span
-                  class="sc-jDwBTQ hbGHwK"
+                  class="sc-gipzik cySfKU"
                 >
                   Gas Limit: 
                   2000000
                   (Units)
                 </span>
                 <span
-                  class="sc-jDwBTQ hbGHwK"
+                  class="sc-gipzik cySfKU"
                 >
                   Gas Price: 
                   1
@@ -145,7 +145,7 @@ exports[`<ConvertMETtoETHForm/> should match its snapshot 1`] = `
       </form>
     </div>
     <div
-      class="sc-iRbamj ifTpSj"
+      class="sc-Rmtcm jOOQRt"
     >
       <button
         type="submit"
@@ -162,10 +162,10 @@ exports[`<ConvertMETtoETHForm/> should match its snapshot 1`] = `
 exports[`<GasEditor/> should match its snapshot 1`] = `
 <div>
   <div
-    class="sc-jKJlTe fkNCah"
+    class="sc-kkGfuU iEVUuG"
   >
     <div
-      class="sc-ckVGcZ kvHIve"
+      class="sc-kEYyzF idKAYT"
     >
       <div>
         <label
@@ -184,10 +184,10 @@ exports[`<GasEditor/> should match its snapshot 1`] = `
       </div>
     </div>
     <div
-      class="sc-hMqMXs keWZLk"
+      class="sc-hSdWYo biZuhZ"
     />
     <div
-      class="sc-ckVGcZ kvHIve"
+      class="sc-kEYyzF idKAYT"
     >
       <div>
         <label

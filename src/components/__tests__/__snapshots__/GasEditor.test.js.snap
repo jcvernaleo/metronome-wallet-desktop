@@ -3,10 +3,10 @@
 exports[`<GasEditor/> should match its snapshot 1`] = `
 <div>
   <div
-    class="sc-jKJlTe fkNCah"
+    class="sc-kkGfuU iEVUuG"
   >
     <div
-      class="sc-ckVGcZ kvHIve"
+      class="sc-kEYyzF idKAYT"
     >
       <div>
         <label
@@ -25,10 +25,10 @@ exports[`<GasEditor/> should match its snapshot 1`] = `
       </div>
     </div>
     <div
-      class="sc-hMqMXs keWZLk"
+      class="sc-hSdWYo biZuhZ"
     />
     <div
-      class="sc-ckVGcZ kvHIve"
+      class="sc-kEYyzF idKAYT"
     >
       <div>
         <label

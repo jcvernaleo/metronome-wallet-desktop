@@ -3,10 +3,10 @@
 exports[`<AmountFields/> should match its snapshot 1`] = `
 <div>
   <div
-    class="sc-jKJlTe fkNCah"
+    class="sc-kkGfuU iEVUuG"
   >
     <div
-      class="sc-ckVGcZ kvHIve"
+      class="sc-kEYyzF idKAYT"
     >
       <button
         type="button"
@@ -34,7 +34,7 @@ exports[`<AmountFields/> should match its snapshot 1`] = `
       </div>
     </div>
     <div
-      class="sc-hMqMXs dnTKXF"
+      class="sc-hSdWYo fhzyBj"
     >
       <svg
         class="sc-bxivhb hXQRLM"
@@ -46,7 +46,7 @@ exports[`<AmountFields/> should match its snapshot 1`] = `
       </svg>
     </div>
     <div
-      class="sc-ckVGcZ kvHIve"
+      class="sc-kEYyzF idKAYT"
     >
       <div>
         <label
